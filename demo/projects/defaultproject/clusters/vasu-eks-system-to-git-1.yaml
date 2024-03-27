@@ -1,0 +1,48 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Cluster
+metadata:
+  name: vasu-eks-system-to-git-1
+  project: defaultproject
+spec:
+  blueprintConfig:
+    name: minimal
+    version: Latest
+  cloudCredentials: vasu-aws
+  config:
+    addons:
+    - name: coredns
+      version: v1.10.1-eksbuild.4
+    - name: vpc-cni
+      version: v1.15.1-eksbuild.1
+    - name: kube-proxy
+      version: v1.28.2-eksbuild.2
+    managedNodeGroups:
+    - amiFamily: AmazonLinux2
+      desiredCapacity: 1
+      iam:
+        withAddonPolicies:
+          autoScaler: true
+      instanceTypes:
+      - t3.large
+      maxSize: 2
+      minSize: 1
+      name: vasu-managed-ng-1
+      version: "1.28"
+      volumeSize: 80
+      volumeType: gp3
+    metadata:
+      name: vasu-eks-system-to-git-1
+      region: us-west-2
+      version: "1.28"
+    network:
+      cni:
+        name: aws-cni
+    vpc:
+      cidr: 192.168.0.0/16
+      clusterEndpoints:
+        privateAccess: true
+        publicAccess: true
+      nat:
+        gateway: Single
+  proxyConfig: {}
+  type: aws-eks
