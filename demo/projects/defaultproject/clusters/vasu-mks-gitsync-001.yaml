@@ -7,7 +7,7 @@ spec:
   blueprintConfig:
     name: minimal
     version: latest
-  cloudCredentials: vasu-mks
+  cloudCredentials: vasu-mks-ssh-v1
   gateway:
     name: vasu-mks-gw
   config:
@@ -24,15 +24,10 @@ spec:
       serviceSubnet: 10.96.0.0/12
     nodes:
     - arch: amd64
-      hostname: ip-172-31-61-40
+      hostname: vasu-mks-scale-c-tb
       operatingSystem: Ubuntu20.04
-      privateip: 172.31.61.40
+      privateip: 10.12.76.7
       roles:
       - Master
       - Worker
-      ssh:
-        ipAddress: 35.86.208.181
-        port: "22"
-        privateKeyPath: mks-test.pem
-        username: ubuntu
   type: mks
