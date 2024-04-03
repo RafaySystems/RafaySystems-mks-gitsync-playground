@@ -5,7 +5,7 @@ metadata:
   project: defaultproject
 spec:
   blueprintConfig:
-    name: default
+    name: minimal
     version: latest
   cloudCredentials: vasu-mks-ssh-v2
   config:
