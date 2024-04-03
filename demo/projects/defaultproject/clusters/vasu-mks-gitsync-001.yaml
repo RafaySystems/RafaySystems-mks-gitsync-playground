@@ -8,8 +8,6 @@ spec:
     name: minimal
     version: latest
   cloudCredentials: vasu-mks-ssh-v1
-  gateway:
-    name: vasu-mks-gw
   config:
     autoApproveNodes: true
     dedicatedMastersEnabled: false
