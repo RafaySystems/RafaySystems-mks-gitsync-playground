@@ -1,7 +1,7 @@
 apiVersion: infra.k8smgmt.io/v3
 kind: Cluster
 metadata:
-  name: vasu-mks-gitsync-007
+  name: vasu-mks-gitsync-008
   project: defaultproject
 spec:
   blueprintConfig:
