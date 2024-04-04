@@ -1,13 +1,13 @@
 apiVersion: infra.k8smgmt.io/v3
 kind: Cluster
 metadata:
-  name: vasu-mks-gitsync-005
+  name: vasu-mks-gitsync-006
   project: defaultproject
 spec:
   blueprintConfig:
     name: minimal
     version: latest
-  cloudCredentials: vasu-mks-ssh-v2
+  cloudCredentials: vasu-mks-ssh-v4
   config:
     autoApproveNodes: true
     dedicatedMastersEnabled: false
@@ -29,3 +29,11 @@ spec:
       - Master
       - Worker
   type: mks
+
+  {
+  "credentials": "{\"gateway_id\":\"4qkolkn\",\"ssh_port\":\"22\",\"ssh_user\":\"ubuntu\",\"ssh_key\":\"-----BEGIN OPENSSH PRIVATE KEY-----\nb3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAABlwAAAAdzc2gtcnNhMdeIllxisa6o8z8uVGD/ZiKi0uLncX+JyIoLmgBeL82D5pnGowsljS6mmb/QfS6otRrnTHXiJZcYrGuqPM/LlRg/2YiotLi53F/m69OkHlCxan1efSveByHR6zxBVIbyDRoQeNGHEwPexb8qGlTh+8Ixctr9+BNQkCKXUZSWrNaeAtmIwF3XF+/5W5G4mJN053Kaa20KoGcIaaxKMh/Ng+aZxqMLJY0uppm/+ExmwG3Rzk3NOShJd+t3LHmjfVFAf46uOAbxOW26E7R3VTgmV/E87VO/HdLsJqBrjKyTDs+HdkooSXZRr0YxRW+/pSSFUQxN0y3TX3ifG8H1uT9C9UhCFzDmsAhC1NflhZUEMWcicZ2bYz8nGJGHD/N2WZF8+RyfiwPMpQyqUrDE6Rz0V/xPXsD3lqj1B5s1RtCJRDwAz8cn6b6QVfmabtK/5uZVnXKTQqdO9QRUiOGj9sRo23FGQddxsuzlslNeomD115Exnw/iBi1LclaAowO6UDoBLVD9B51UdnbwMt6mTBsLBMnouUaRbnPJN+/uGTSWIdbCdyakiC1RgF+h+UKBQAAADBANNFSyf6YCSNtNfzPnhGGu/WBU4UCSo38zO9GVeoRvJypfqutF9058Cnqn2rMtiRX4/yURz0afAWIYagRLrywJaf/iK2FkS8crdn/FM2zu65z9H0ZhXnSRtHzUqNQzwRAA45O7f20qUI8sUr3tSH0h2jAfPLbnAwLs8OX+MF89XAU1tsDpg1gdefnjdBdr4mw+hOSuKQ+FX4Nxij6PAqYax8AGti+jsH4Ui1ZRxntMt43nUauflc1cY3fCmi5i08/B2N0yGMNH/DLmlSIKNPWQ4PUYBb0z+xYsZcKELC+qBs+RDM1prcrZwoyPssKEEaA92WCl5pCdsytDa11GlCCN0VWCw/b3K3LwRhW4epAgaV71gIqqqYTnUIzMtTUJQAQ==\n-----END OPENSSH PRIVATE KEY-----\"}",
+  "name": "vasu-mks-ssh-v3",
+  "provider": 6,
+  "credential_type": 5,
+  "type": 1
+}
