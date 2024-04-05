@@ -28,4 +28,10 @@ spec:
       roles:
       - Master
       - Worker
+    - arch: amd64
+      hostname: vasu-mks-scale-w-tb
+      operatingSystem: Ubuntu20.04
+      privateip: 10.12.7.191
+      roles:
+      - Worker
   type: mks
