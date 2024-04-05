@@ -1,7 +1,7 @@
 apiVersion: infra.k8smgmt.io/v3
 kind: Cluster
 metadata:
-  name: vasu-mks-gitsync-009
+  name: vasu-mks-gitsync-010
   project: defaultproject
 spec:
   blueprintConfig:
@@ -24,7 +24,7 @@ spec:
     - arch: amd64
       hostname: vasu-mks-scale-c-tb
       operatingSystem: Ubuntu20.04
-      privateip: 10.12.76.7
+      privateip: 10.12.88.40
       roles:
       - Master
       - Worker
