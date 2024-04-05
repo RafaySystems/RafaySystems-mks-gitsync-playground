@@ -27,21 +27,18 @@ spec:
       privateip: 10.12.39.91
       roles:
       - Master
-      - Worker
     - arch: amd64
       hostname: vasu-mks-scale-c-tb-2
       operatingSystem: Ubuntu20.04
       privateip: 10.12.7.67
       roles:
       - Master
-      - Worker
     - arch: amd64
       hostname: vasu-mks-scale-c-tb-3
       operatingSystem: Ubuntu20.04
       privateip: 10.12.42.128
       roles:
       - Master
-      - Worker
     - arch: amd64
       hostname: vasu-mks-scale-w-tb
       operatingSystem: Ubuntu20.04
