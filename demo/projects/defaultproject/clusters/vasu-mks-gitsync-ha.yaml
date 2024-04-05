@@ -50,5 +50,5 @@ spec:
       operatingSystem: Ubuntu20.04
       privateip: 10.12.33.10
       roles:
-      - Worker
+      - Master
   type: mks
