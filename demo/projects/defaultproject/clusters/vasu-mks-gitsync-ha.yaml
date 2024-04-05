@@ -45,4 +45,10 @@ spec:
       privateip: 10.12.11.159
       roles:
       - Worker
+    - arch: amd64
+      hostname: vasu-mks-scale-w-tb-2
+      operatingSystem: Ubuntu20.04
+      privateip: 10.12.33.10
+      roles:
+      - Worker
   type: mks
