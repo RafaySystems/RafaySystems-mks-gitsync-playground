@@ -9,46 +9,7 @@ spec:
     version: latest
   cloudCredentials: vasu-mks-ssh-v4
   config:
-    autoApproveNodes: true
-    dedicatedMastersEnabled: true
-    highAvailability: true
-    kubernetesVersion: v1.28.5
-    location: sanjose-us
-    network:
-      cni:
-        name: Calico
-        version: 3.26.1
-      podSubnet: 10.244.0.0/16
-      serviceSubnet: 10.96.0.0/12
-    nodes:
-    - arch: amd64
-      hostname: vasu-mks-scale-c-tb-1
-      operatingSystem: Ubuntu20.04
-      privateip: 10.12.39.91
-      roles:
-      - Master
-    - arch: amd64
-      hostname: vasu-mks-scale-c-tb-2
-      operatingSystem: Ubuntu20.04
-      privateip: 10.12.7.67
-      roles:
-      - Master
-    - arch: amd64
-      hostname: vasu-mks-scale-c-tb-3
-      operatingSystem: Ubuntu20.04
-      privateip: 10.12.42.128
-      roles:
-      - Master
-    - arch: amd64
-      hostname: vasu-mks-scale-w-tb
-      operatingSystem: Ubuntu20.04
-      privateip: 10.12.11.159
-      roles:
-      - Worker
-    - arch: amd64
-      hostname: vasu-mks-scale-w-tb-2
-      operatingSystem: Ubuntu20.04
-      privateip: 10.12.33.10
-      roles:
-      - Master
+    kubernetesUpgrade: {}
+    network: {}
+  proxyConfig: {}
   type: mks
