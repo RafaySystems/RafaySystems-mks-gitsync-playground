@@ -1,13 +1,13 @@
 apiVersion: infra.k8smgmt.io/v3
 kind: Cluster
 metadata:
-  name: vasu-mks-gitsync-001
+  name: vasu-mks-gitsync-009
   project: defaultproject
 spec:
   blueprintConfig:
-    name: minimal
+    name: default
     version: latest
-  cloudCredentials: vasu-mks-ssh-v1
+  cloudCredentials: vasu-mks-ssh-v4
   config:
     autoApproveNodes: true
     kubernetesUpgrade:
