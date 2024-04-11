@@ -23,7 +23,7 @@ spec:
     - arch: amd64
       hostname: vasu-mks-scale-c-tb
       operatingSystem: Ubuntu20.04
-      privateIP: 10.12.88.40
+      privateip: 10.12.88.40
       roles:
       - Master
       - Worker
