@@ -12,7 +12,7 @@ spec:
     autoApproveNodes: true
     dedicatedMastersEnabled: true
     highAvailability: true
-    kubernetesVersion: v1.28.5
+    kubernetesVersion: v1.29.0
     location: sanjose-us
     network:
       cni:
@@ -56,7 +56,7 @@ spec:
       operatingSystem: Ubuntu20.04
       privateIP: 10.12.99.18
       roles:
-      - Worker
+      - Worker 
   proxy: {}
   systemCompenentsPlacement: {}
   type: mks
