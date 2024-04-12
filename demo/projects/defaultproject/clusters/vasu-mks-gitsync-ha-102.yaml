@@ -30,19 +30,19 @@ spec:
     - arch: amd64
       hostname: vasu-mks-scale-c-tb-2
       operatingSystem: Ubuntu20.04
-      privateip: 10.12.88.93
+      privateIP: 10.12.88.93
       roles:
       - Master
     - arch: amd64
       hostname: vasu-mks-scale-c-tb-3
       operatingSystem: Ubuntu20.04
-      privateip: 10.12.52.253
+      privateIP: 10.12.52.253
       roles:
       - Master
     - arch: amd64
       hostname: vasu-mks-scale-w-tb
       operatingSystem: Ubuntu20.04
-      privateip: 10.12.55.250
+      privateIP: 10.12.55.250
       roles:
       - Worker
   proxy: {}
