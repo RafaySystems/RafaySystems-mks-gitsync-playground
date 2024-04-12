@@ -4,7 +4,7 @@ metadata:
   name: vasu-mks-gitsync-ha-102
   project: defaultproject
 spec:
-  blueprintConfig:
+  blueprint:
     name: default
     version: latest
   cloudCredentials: vasu-mks-ssh-v4
@@ -24,7 +24,7 @@ spec:
     - arch: amd64
       hostname: vasu-mks-scale-c-tb-1
       operatingSystem: Ubuntu20.04
-      privateip: 10.12.110.44
+      privateIP: 10.12.110.44
       roles:
       - Master
     - arch: amd64
@@ -45,4 +45,7 @@ spec:
       privateip: 10.12.55.250
       roles:
       - Worker
+  proxy: {}
+  systemCompenentsPlacement: {}
   type: mks
+
