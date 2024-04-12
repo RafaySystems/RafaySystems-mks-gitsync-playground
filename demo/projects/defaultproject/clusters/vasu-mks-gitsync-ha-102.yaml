@@ -45,6 +45,12 @@ spec:
       privateIP: 10.12.55.250
       roles:
       - Worker
+    - arch: amd64
+      hostname: vasu-mks-scale-w-tb-2
+      operatingSystem: Ubuntu20.04
+      privateIP: 10.12.125.48
+      roles:
+      - Worker
   proxy: {}
   systemCompenentsPlacement: {}
   type: mks
