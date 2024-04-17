@@ -160,4 +160,5 @@ spec:
       operatingSystem: Ubuntu20.04
       privateIP: 10.12.31.29
   systemCompenentsPlacement: {}
+  proxy: {}
   type: mks
