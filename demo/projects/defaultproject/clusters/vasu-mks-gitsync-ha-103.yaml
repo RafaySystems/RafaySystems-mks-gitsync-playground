@@ -72,7 +72,7 @@ spec:
       operatingSystem: Ubuntu20.04
       privateIP: 10.12.105.53
     - arch: amd64
-      hostname: vasu-mks-salt-scale-w-delay-8
+      hostname: vasu-mks-salt-scale-w-delay-9
       operatingSystem: Ubuntu20.04
       privateIP: 10.12.40.251
     - arch: amd64
@@ -119,6 +119,46 @@ spec:
       hostname: vasu-mks-salt-scale-w-delay-20
       operatingSystem: Ubuntu20.04
       privateIP: 10.12.79.102
+    - arch: amd64
+      hostname: vasu-mks-salt-scale-w-delay-21
+      operatingSystem: Ubuntu20.04
+      privateIP: 10.12.67.70
+    - arch: amd64
+      hostname: vasu-mks-salt-scale-w-delay-22
+      operatingSystem: Ubuntu20.04
+      privateIP: 10.12.14.194
+    - arch: amd64
+      hostname: vasu-mks-salt-scale-w-delay-23
+      operatingSystem: Ubuntu20.04
+      privateIP: 10.12.56.233
+    - arch: amd64
+      hostname: vasu-mks-salt-scale-w-delay-24
+      operatingSystem: Ubuntu20.04
+      privateIP: 10.12.66.219
+    - arch: amd64
+      hostname: vasu-mks-salt-scale-w-delay-25
+      operatingSystem: Ubuntu20.04
+      privateIP: 10.12.51.166
+    - arch: amd64
+      hostname: vasu-mks-salt-scale-w-delay-26
+      operatingSystem: Ubuntu20.04
+      privateIP: 10.12.57.51
+    - arch: amd64
+      hostname: vasu-mks-salt-scale-w-delay-27
+      operatingSystem: Ubuntu20.04
+      privateIP: 10.12.76.165
+    - arch: amd64
+      hostname: vasu-mks-salt-scale-w-delay-28
+      operatingSystem: Ubuntu20.04
+      privateIP: 10.12.17.238
+    - arch: amd64
+      hostname: vasu-mks-salt-scale-w-delay-29
+      operatingSystem: Ubuntu20.04
+      privateIP: 10.12.15.29
+    - arch: amd64
+      hostname: vasu-mks-salt-scale-w-delay-30
+      operatingSystem: Ubuntu20.04
+      privateIP: 10.12.31.29
   proxy: {}
   systemCompenentsPlacement: {}
   type: mks
