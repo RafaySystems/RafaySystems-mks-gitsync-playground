@@ -159,6 +159,6 @@ spec:
       hostname: vasu-mks-salt-scale-w-delay-30
       operatingSystem: Ubuntu20.04
       privateIP: 10.12.31.29
-  proxy: {}
   systemCompenentsPlacement: {}
+  proxy: {}
   type: mks
