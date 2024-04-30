@@ -62,5 +62,6 @@ spec:
       operatingSystem: Ubuntu20.04
       privateIP: 10.12.4.32
       ssh: {}
-  proxy: {}
   type: mks
+  proxy: {}
+
