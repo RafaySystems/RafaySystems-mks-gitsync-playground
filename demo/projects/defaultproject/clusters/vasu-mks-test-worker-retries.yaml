@@ -56,4 +56,9 @@ spec:
       operatingSystem: Ubuntu20.04
       privateIP: 10.12.82.195
       ssh: {}
+    - arch: amd64
+      hostname: vasu-mks-salt-ha-qc-w-3
+      operatingSystem: Ubuntu20.04
+      privateIP: 10.12.4.32
+      ssh: {}   
   type: mks
