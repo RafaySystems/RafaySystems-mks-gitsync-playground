@@ -4,9 +4,9 @@ metadata:
   name: vasu-mks-gitsync-1001
   project: defaultproject
 spec:
-  cloudCredentials: vasu-mks-ssh-v5
   blueprint:
     name: minimal
+  cloudCredentials: vasu-mks-ssh-v5
   config:
     autoApproveNodes: true
     dedicatedControlPlane: false
