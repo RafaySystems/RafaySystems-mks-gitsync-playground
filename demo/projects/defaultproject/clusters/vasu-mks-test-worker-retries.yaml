@@ -4,6 +4,8 @@ metadata:
   name: vasu-mks-test-worker-retries
   project: defaultproject
 spec:
+  proxy: {}
+  cloudCredentials: vasu-mks-ssh-v5
   blueprint:
     name: minimal
   config:
