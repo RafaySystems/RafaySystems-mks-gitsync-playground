@@ -1,0 +1,59 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Cluster
+metadata:
+  name: vasu-mks-test-worker-retries
+  project: defaultproject
+spec:
+  blueprint:
+    name: minimal
+  config:
+    autoApproveNodes: true
+    dedicatedControlPlane: true
+    highAvailability: true
+    kubernetesUpgrade: {}
+    kubernetesVersion: v1.28.5
+    location: shanghai-cn
+    network:
+      cni:
+        name: Calico
+        version: 3.26.1
+      podSubnet: 10.244.0.0/16
+      serviceSubnet: 10.96.0.0/12
+    nodes:
+    - arch: amd64
+      hostname: vasu-mks-salt-ha-qc-c-3
+      operatingSystem: Ubuntu20.04
+      privateIP: 10.12.97.168
+      roles:
+      - ControlPlane
+      ssh: {}
+    - arch: amd64
+      hostname: vasu-mks-salt-ha-qc-c-2
+      operatingSystem: Ubuntu20.04
+      privateIP: 10.12.106.200
+      roles:
+      - ControlPlane
+      ssh: {}
+    - arch: amd64
+      hostname: vasu-mks-salt-ha-qc-w-1
+      operatingSystem: Ubuntu20.04
+      privateIP: 10.12.95.152
+      ssh: {}
+    - arch: amd64
+      hostname: vasu-mks-salt-ha-qc-w-3
+      operatingSystem: Ubuntu20.04
+      privateIP: 10.12.4.32
+      ssh: {}
+    - arch: amd64
+      hostname: vasu-mks-salt-ha-qc-c-1
+      operatingSystem: Ubuntu20.04
+      privateIP: 10.12.4.28
+      roles:
+      - ControlPlane
+      ssh: {}
+    - arch: amd64
+      hostname: vasu-mks-salt-ha-qc-w-2
+      operatingSystem: Ubuntu20.04
+      privateIP: 10.12.82.195
+      ssh: {}
+  type: mks
