@@ -4,7 +4,6 @@ metadata:
   name: vasu-mks-test-worker-retries
   project: defaultproject
 spec:
-  proxy: {}
   cloudCredentials: vasu-mks-ssh-v5
   blueprint:
     name: minimal
@@ -62,5 +61,6 @@ spec:
       hostname: vasu-mks-salt-ha-qc-w-3
       operatingSystem: Ubuntu20.04
       privateIP: 10.12.4.32
-      ssh: {}   
+      ssh: {}
+  proxy: {}
   type: mks
