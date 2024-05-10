@@ -10,7 +10,6 @@ spec:
   config:
     autoApproveNodes: true
     highAvailability: false
-    kubernetesUpgrade: {}
     kubernetesVersion: v1.28.5
     location: shanghai-cn
     network:
