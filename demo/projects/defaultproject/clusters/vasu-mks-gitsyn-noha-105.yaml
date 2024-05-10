@@ -1,7 +1,7 @@
 apiVersion: infra.k8smgmt.io/v3
 kind: Cluster
 metadata:
-  name: vasu-mks-gitsync-noha-104
+  name: vasu-mks-gitsync-noha-105
   project: defaultproject
 spec:
   cloudCredentials: vasu-mks-v3ssh-2
