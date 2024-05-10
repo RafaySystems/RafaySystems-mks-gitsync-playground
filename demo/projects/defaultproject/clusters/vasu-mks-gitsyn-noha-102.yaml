@@ -4,7 +4,7 @@ metadata:
   name: vasu-mks-gitsync-noha-102
   project: defaultproject
 spec:
-  cloudCredentials: vasu-mks-v3ssh-1
+  cloudCredentials: vasu-mks-v3ssh-2
   blueprint:
     name: minimal
   config:
