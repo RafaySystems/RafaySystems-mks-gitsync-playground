@@ -9,9 +9,8 @@ spec:
   cloudCredentials: vasu-mks-ssh-v5
   config:
     autoApproveNodes: true
-    dedicatedControlPlane: false
-    highAvailability: false
-    kubernetesUpgrade: {}
+    kubernetesUpgrade:
+      params: {}
     kubernetesVersion: v1.28.5
     location: shanghai-cn
     network:
@@ -26,9 +25,11 @@ spec:
       operatingSystem: Ubuntu20.04
       privateIP: 10.12.4.32
       roles:
-      - ControlPlane
+      - Master
     - arch: amd64
       hostname: vasu-mks-salt-ha-qc-w-4
       operatingSystem: Ubuntu20.04
       privateIP: 10.12.88.179
+      roles:
+      - Worker
   type: mks
