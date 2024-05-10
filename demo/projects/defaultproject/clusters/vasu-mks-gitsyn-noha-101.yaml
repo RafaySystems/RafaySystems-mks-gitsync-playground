@@ -1,0 +1,33 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Cluster
+metadata:
+  name: vasu-mks-gitsync-noha-101
+  project: defaultproject
+spec:
+  cloudCredentials: vasu-mks-v3ssh-1
+  blueprint:
+    name: minimal
+  config:
+    autoApproveNodes: true
+    highAvailability: false
+    kubernetesUpgrade: {}
+    kubernetesVersion: v1.28.5
+    location: shanghai-cn
+    network:
+      cni:
+        name: Calico
+        version: 3.26.1
+      podSubnet: 10.244.0.0/16
+      serviceSubnet: 10.96.0.0/12
+    nodes:
+    - arch: amd64
+      hostname: vasu-mks-scale-c-tb
+      operatingSystem: Ubuntu20.04
+      privateIP: 10.12.81.196
+      roles:
+      - ControlPlane
+    - arch: amd64
+      hostname: vasu-mks-scale-w-tb
+      operatingSystem: Ubuntu20.04
+      privateIP: 10.12.90.35
+  type: mks
