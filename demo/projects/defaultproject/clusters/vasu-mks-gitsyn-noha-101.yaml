@@ -9,7 +9,6 @@ spec:
     name: minimal
   config:
     autoApproveNodes: true
-    highAvailability: false
     kubernetesVersion: v1.28.5
     location: shanghai-cn
     network:
