@@ -13,7 +13,7 @@ spec:
     autoApproveNodes: true
     dedicatedControlPlane: true
     highAvailability: true
-    kubernetesVersion: v1.28.9
+    kubernetesVersion: v1.29.4
     location: sanjose-us
     network:
       cni:
