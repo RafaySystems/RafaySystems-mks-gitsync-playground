@@ -1,0 +1,16 @@
+apiVersion: integrations.k8smgmt.io/v3
+kind: Repository
+metadata:
+  name: default-cert-manager
+  project: defaultproject
+spec:
+  endpoint: https://github.com/jetstack/cert-manager.git
+  options: {}
+  type: Git
+status:
+  projects:
+  - projectId: rx28oml
+    repositoryId: 7w2lnkp
+  webhookConfig:
+    webhookSecret: cc97f2fe36bac4daf2bd41cf68225488f76263c14cc97c3a18c18acc7ef30160
+    webhookURL: https://console-vasu-mks-v3.dev.rafay-edge.net/v2/config/webhook/repository/7w2lnkp
