@@ -52,3 +52,59 @@ spec:
       privateip: 10.12.105.227
       roles:
       - Worker
+      labels:
+        app: infra
+      taints:
+      - effect: NoSchedule
+        key: app
+        value: infra
+    - arch: amd64
+      hostname: vasu-mks-scale-w-tb-3
+      operatingSystem: Ubuntu20.04
+      privateIP: 10.12.29.164
+      roles:
+      - Worker
+    - arch: amd64
+      hostname: vasu-mks-scale-w-tb-4
+      operatingSystem: Ubuntu20.04
+      privateIP: 10.12.106.155 
+      roles:
+      - Worker
+    - arch: amd64
+      hostname: vasu-mks-scale-w-tb-5
+      operatingSystem: Ubuntu20.04
+      privateIP: 10.12.106.74
+      roles:
+      - Worker
+    - arch: amd64
+      hostname: vasu-mks-scale-w-tb-6
+      operatingSystem: Ubuntu20.04
+      privateIP: 10.12.101.223 
+      roles:
+      - Worker
+      labels:
+        app: infra
+      taints:
+      - effect: NoSchedule
+        key: app
+        value: infra
+    - arch: amd64
+      hostname: vasu-mks-scale-w-tb-7
+      operatingSystem: Ubuntu20.04
+      privateIP: 10.12.110.50
+      roles:
+      - Worker
+      labels:
+        app: infra
+      taints:
+      - effect: NoSchedule
+        key: app
+        value: infra  
+  systemComponentsPlacement:
+    nodeSelector:
+      app: infra
+    tolerations:
+    - effect: NoSchedule
+      key: app
+      operator: Equal
+      value: infra
