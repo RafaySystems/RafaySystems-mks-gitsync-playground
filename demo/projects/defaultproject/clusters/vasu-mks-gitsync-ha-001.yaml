@@ -4,6 +4,7 @@ metadata:
   name: vasu-mks-gitsync-ha-001
   project: defaultproject
 spec:
+  type: mks
   blueprint:
     name: minimal
     version: latest
