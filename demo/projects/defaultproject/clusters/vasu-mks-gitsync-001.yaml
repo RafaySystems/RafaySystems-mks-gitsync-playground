@@ -39,7 +39,7 @@ spec:
       operatingSystem: Ubuntu20.04
       privateip: 10.12.118.110
       roles:
-      - ControlPlane
+      - Master
     - arch: amd64
       hostname: vasu-mks-scale-w-tb-1
       operatingSystem: Ubuntu20.04
