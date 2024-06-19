@@ -13,8 +13,15 @@ spec:
           name: demo
         repository: vasu-mks-git-repo
         revision: main
+      gitToSystemSync: true
       includedResources:
       - name: '*'
+      sourceAsDestination: true
+      sourceRepo:
+        path:
+          name: demo
+        repository: vasu-mks-git-repo
+        revision: main
       systemToGitSync: true
     name: vasu-mks-system-sync-stage
     type: SystemSync
