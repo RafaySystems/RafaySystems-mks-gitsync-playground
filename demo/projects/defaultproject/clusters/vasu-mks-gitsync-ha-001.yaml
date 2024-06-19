@@ -33,7 +33,7 @@ spec:
       operatingSystem: Ubuntu20.04
       privateip: 10.12.33.30
       roles:
-      - Master
+      - ControlPlane
     - arch: amd64
       hostname: vasu-mks-scale-c-tb-3
       operatingSystem: Ubuntu20.04
