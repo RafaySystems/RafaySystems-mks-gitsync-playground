@@ -14,11 +14,7 @@ spec:
         repository: vasu-mks-git-repo
         revision: main
       includedResources:
-      - name: Blueprint
-      - name: Cluster
-      - name: Agent
-      - name: Pipeline
-      - name: Repository
+      - name: '*'
       systemToGitSync: true
     name: vasu-mks-system-sync-stage
     type: SystemSync
