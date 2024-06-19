@@ -68,6 +68,17 @@ spec:
         key: app
         value: infra
     - arch: amd64
+      hostname: vasu-mks-salt-scale-delay-c-3
+      operatingSystem: Ubuntu20.04
+      privateIP: 10.12.104.248
+      roles:
+      - ControlPlane
+      ssh:
+        ipAddress: 10.12.104.248
+        port: "22"
+        privateKeyPath: /home/ubuntu/oci
+        username: ubuntu
+    - arch: amd64
       hostname: vasu-mks-salt-scale-delay-w-1
       labels:
         app: infra
@@ -84,15 +95,4 @@ spec:
       - effect: NoSchedule
         key: app
         value: infra
-    - arch: amd64
-      hostname: vasu-mks-salt-scale-delay-c-3
-      operatingSystem: Ubuntu20.04
-      privateIP: 10.12.104.248
-      roles:
-      - ControlPlane
-      ssh:
-        ipAddress: 10.12.104.248
-        port: "22"
-        privateKeyPath: /home/ubuntu/oci
-        username: ubuntu
   type: mks
