@@ -5,7 +5,8 @@ metadata:
   project: defaultproject
 spec:
   blueprint:
-    name: minimal
+    name: rauto-blueprint-7126281
+    version: v1
   config:
     kubernetesVersion: v1.28.9
     network:
