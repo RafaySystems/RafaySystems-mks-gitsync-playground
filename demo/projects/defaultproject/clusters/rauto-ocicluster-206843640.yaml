@@ -17,11 +17,12 @@ spec:
       serviceSubnet: 10.96.0.0/12
     nodes:
     - arch: amd64
-      hostname: rauto-sdk-1718891147-555052
+      hostname: rauto-sdk-1718890938-900286
       operatingSystem: Ubuntu22.04
-      privateIP: 10.0.2.52
+      privateIP: 10.0.2.207
       roles:
       - Worker
+      - ControlPlane
       - Storage
     - arch: amd64
       hostname: rauto-sdk-1718891043-662366
@@ -31,11 +32,16 @@ spec:
       - Worker
       - Storage
     - arch: amd64
-      hostname: rauto-sdk-1718890938-900286
+      hostname: rauto-sdk-1718891147-555052
       operatingSystem: Ubuntu22.04
-      privateIP: 10.0.2.207
+      privateIP: 10.0.2.52
       roles:
       - Worker
-      - ControlPlane
       - Storage
+    - arch: amd64
+      hostname: rauto-sdk-1718893345-003951
+      operatingSystem: Ubuntu22.04
+      privateIP: 10.0.2.210
+      roles:
+      - Worker
   type: mks
