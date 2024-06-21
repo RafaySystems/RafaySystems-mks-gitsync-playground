@@ -10,7 +10,7 @@ spec:
   cloudCredentials: vasu-mks-ssh-01
   config:
     autoApproveNodes: true
-    dedicatedControlPlane: true
+    dedicatedMastersEnabled: true
     highAvailability: true
     kubernetesVersion: v1.28.9
     location: sanjose-us
@@ -22,9 +22,15 @@ spec:
       serviceSubnet: 10.96.0.0/12
     nodes:
     - arch: amd64
-      hostname: vasu-mks-scale-w-tb-1
+      hostname: vasu-mks-scale-c-tb-2
       operatingSystem: Ubuntu20.04
-      privateIP: 10.12.44.34
+      privateip: 10.12.33.30
+      roles:
+      - Master
+    - arch: amd64
+      hostname: vasu-mks-scale-w-tb-2
+      operatingSystem: Ubuntu20.04
+      privateip: 10.12.105.227
       roles:
       - Worker
     - arch: amd64
@@ -32,7 +38,7 @@ spec:
       labels:
         app: infra
       operatingSystem: Ubuntu20.04
-      privateIP: 10.12.110.50
+      privateip: 10.12.110.50
       roles:
       - Worker
       taints:
@@ -40,45 +46,9 @@ spec:
         key: app
         value: infra
     - arch: amd64
-      hostname: vasu-mks-scale-w-tb-2
-      operatingSystem: Ubuntu20.04
-      privateIP: 10.12.105.227
-      roles:
-      - Worker
-    - arch: amd64
-      hostname: vasu-mks-scale-c-tb-2
-      operatingSystem: Ubuntu20.04
-      privateIP: 10.12.33.30
-      roles:
-      - ControlPlane
-    - arch: amd64
-      hostname: vasu-mks-scale-c-tb-1
-      operatingSystem: Ubuntu20.04
-      privateIP: 10.12.87.186
-      roles:
-      - ControlPlane
-    - arch: amd64
-      hostname: vasu-mks-scale-w-tb-5
-      operatingSystem: Ubuntu20.04
-      privateIP: 10.12.106.74
-      roles:
-      - Worker
-    - arch: amd64
       hostname: vasu-mks-scale-w-tb-3
       operatingSystem: Ubuntu20.04
-      privateIP: 10.12.29.164
-      roles:
-      - Worker
-    - arch: amd64
-      hostname: vasu-mks-scale-c-tb-3
-      operatingSystem: Ubuntu20.04
-      privateIP: 10.12.118.110
-      roles:
-      - ControlPlane
-    - arch: amd64
-      hostname: vasu-mks-scale-w-tb-4
-      operatingSystem: Ubuntu20.04
-      privateIP: 10.12.106.155
+      privateip: 10.12.29.164
       roles:
       - Worker
     - arch: amd64
@@ -86,13 +56,43 @@ spec:
       labels:
         app: infra
       operatingSystem: Ubuntu20.04
-      privateIP: 10.12.101.223
+      privateip: 10.12.101.223
       roles:
       - Worker
       taints:
       - effect: NoSchedule
         key: app
         value: infra
+    - arch: amd64
+      hostname: vasu-mks-scale-c-tb-3
+      operatingSystem: Ubuntu20.04
+      privateip: 10.12.118.110
+      roles:
+      - Master
+    - arch: amd64
+      hostname: vasu-mks-scale-c-tb-1
+      operatingSystem: Ubuntu20.04
+      privateip: 10.12.87.186
+      roles:
+      - Master
+    - arch: amd64
+      hostname: vasu-mks-scale-w-tb-5
+      operatingSystem: Ubuntu20.04
+      privateip: 10.12.106.74
+      roles:
+      - Worker
+    - arch: amd64
+      hostname: vasu-mks-scale-w-tb-4
+      operatingSystem: Ubuntu20.04
+      privateip: 10.12.106.155
+      roles:
+      - Worker
+    - arch: amd64
+      hostname: vasu-mks-scale-w-tb-1
+      operatingSystem: Ubuntu20.04
+      privateip: 10.12.44.34
+      roles:
+      - Worker
   systemComponentsPlacement:
     nodeSelector:
       app: infra
