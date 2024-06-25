@@ -101,8 +101,4 @@ spec:
       key: app
       operator: Equal
       value: infra
-    - effect: NoSchedule
-      key: infra
-      operator: Equal
-      value: rafay
   type: mks
