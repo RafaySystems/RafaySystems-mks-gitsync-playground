@@ -4,6 +4,5 @@ metadata:
   name: vasu-mks-agent-inactive
   project: defaultproject
 spec:
-  active: true
   type: Docker
   version: r2.7.0
