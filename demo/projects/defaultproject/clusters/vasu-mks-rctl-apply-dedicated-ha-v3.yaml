@@ -5,8 +5,8 @@ metadata:
   project: defaultproject
 spec:
   blueprint:
-    name: default
-    version: latest
+    name: minimal-openebs
+    version: v1
   cloudCredentials: vasu-mks-ssh-01
   config:
     autoApproveNodes: true
@@ -22,22 +22,17 @@ spec:
       serviceSubnet: 10.96.0.0/12
     nodes:
     - arch: amd64
-      hostname: vasu-mks-salt-scale-delay-c-2
+      hostname: vasu-mks-salt-scale-delay-c-3
       operatingSystem: Ubuntu20.04
-      privateIP: 10.12.39.130
+      privateIP: 10.12.117.35
       roles:
       - ControlPlane
     - arch: amd64
-      hostname: vasu-mks-salt-scale-delay-w-2
+      hostname: vasu-mks-salt-scale-delay-w-1
       operatingSystem: Ubuntu20.04
-      privateIP: 10.12.5.203
+      privateIP: 10.12.75.4
       roles:
       - Worker
-      ssh:
-        ipAddress: 10.12.5.203
-        port: "22"
-        privateKeyPath: /home/ubuntu/oci
-        username: ubuntu
     - arch: amd64
       hostname: vasu-mks-salt-scale-delay-w-3
       operatingSystem: Ubuntu20.04
@@ -50,21 +45,26 @@ spec:
         privateKeyPath: /home/ubuntu/oci
         username: ubuntu
     - arch: amd64
-      hostname: vasu-mks-salt-scale-delay-c-1
+      hostname: vasu-mks-salt-scale-delay-w-2
       operatingSystem: Ubuntu20.04
-      privateIP: 10.12.52.53
+      privateIP: 10.12.5.203
+      roles:
+      - Worker
+      ssh:
+        ipAddress: 10.12.5.203
+        port: "22"
+        privateKeyPath: /home/ubuntu/oci
+        username: ubuntu
+    - arch: amd64
+      hostname: vasu-mks-salt-scale-delay-c-2
+      operatingSystem: Ubuntu20.04
+      privateIP: 10.12.39.130
       roles:
       - ControlPlane
     - arch: amd64
-      hostname: vasu-mks-salt-scale-delay-w-1
+      hostname: vasu-mks-salt-scale-delay-c-1
       operatingSystem: Ubuntu20.04
-      privateIP: 10.12.75.4
-      roles:
-      - Worker
-    - arch: amd64
-      hostname: vasu-mks-salt-scale-delay-c-3
-      operatingSystem: Ubuntu20.04
-      privateIP: 10.12.117.35
+      privateIP: 10.12.52.53
       roles:
       - ControlPlane
   type: mks
