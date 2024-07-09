@@ -10,7 +10,7 @@ spec:
   cloudCredentials: vasu-mks-ssh-01
   config:
     autoApproveNodes: true
-    dedicatedMastersEnabled: true
+    dedicatedControlPlane: true
     highAvailability: true
     kubernetesVersion: v1.28.9
     location: sanjose-us
@@ -22,315 +22,255 @@ spec:
       serviceSubnet: 10.96.0.0/12
     nodes:
     - arch: amd64
-      hostname: vasu-mks-salt-scale-delay-c-1
+      hostname: vasu-mks-salt-scale-delay-w-18
       operatingSystem: Ubuntu20.04
-      privateip: 10.12.34.215
-      roles:
-      - Master
-    - arch: amd64
-      hostname: vasu-mks-salt-scale-delay-c-2
-      operatingSystem: Ubuntu20.04
-      privateip: 10.12.126.252
-      roles:
-      - Master
-    - arch: amd64
-      hostname: vasu-mks-salt-scale-delay-c-3
-      operatingSystem: Ubuntu20.04
-      privateip: 10.12.122.234
-      roles:
-      - Master
-    - arch: amd64
-      hostname: vasu-mks-salt-scale-delay-w-1
-      operatingSystem: Ubuntu20.04
-      privateip: 10.12.75.83
-      roles:
-      - Worker
-    - arch: amd64
-      hostname: vasu-mks-salt-scale-delay-w-2
-      operatingSystem: Ubuntu20.04
-      privateip: 10.12.104.89
-      roles:
-      - Worker
-    - arch: amd64
-      hostname: vasu-mks-salt-scale-delay-w-3
-      operatingSystem: Ubuntu20.04
-      privateip: 10.12.53.134
-      roles:
-      - Worker
-    - arch: amd64
-      hostname: vasu-mks-salt-scale-delay-w-4
-      operatingSystem: Ubuntu20.04
-      privateip: 10.12.94.181
-      roles:
-      - Worker
-    - arch: amd64
-      hostname: vasu-mks-salt-scale-delay-w-5
-      operatingSystem: Ubuntu20.04
-      privateip: 10.12.42.106
-      roles:
-      - Worker
-    - arch: amd64
-      hostname: vasu-mks-salt-scale-delay-w-6
-      operatingSystem: Ubuntu20.04
-      privateip: 10.12.17.254
+      privateIP: 10.12.92.146
       roles:
       - Worker
     - arch: amd64
       hostname: vasu-mks-salt-scale-delay-w-7
       operatingSystem: Ubuntu20.04
-      privateip: 10.12.44.59
+      privateIP: 10.12.44.59
       roles:
       - Worker
     - arch: amd64
-      hostname: vasu-mks-salt-scale-delay-w-8
+      hostname: vasu-mks-salt-scale-delay-w-1
       operatingSystem: Ubuntu20.04
-      privateip: 10.12.80.140
-      roles:
-      - Worker
-    - arch: amd64
-      hostname: vasu-mks-salt-scale-delay-w-9
-      operatingSystem: Ubuntu20.04
-      privateip: 10.12.60.40
-      roles:
-      - Worker
-    - arch: amd64
-      hostname: vasu-mks-salt-scale-delay-w-10
-      operatingSystem: Ubuntu20.04
-      privateip: 10.12.99.67
-      roles:
-      - Worker
-    - arch: amd64
-      hostname: vasu-mks-salt-scale-delay-w-11
-      operatingSystem: Ubuntu20.04
-      privateip: 10.12.122.208
-      roles:
-      - Worker
-    - arch: amd64
-      hostname: vasu-mks-salt-scale-delay-w-12
-      operatingSystem: Ubuntu20.04
-      privateip: 10.12.73.202
-      roles:
-      - Worker
-    - arch: amd64
-      hostname: vasu-mks-salt-scale-delay-w-13
-      operatingSystem: Ubuntu20.04
-      privateip: 10.12.88.49
-      roles:
-      - Worker
-    - arch: amd64
-      hostname: vasu-mks-salt-scale-delay-w-14
-      operatingSystem: Ubuntu20.04
-      privateip: 10.12.83.196
-      roles:
-      - Worker
-    - arch: amd64
-      hostname: vasu-mks-salt-scale-delay-w-15
-      operatingSystem: Ubuntu20.04
-      privateip: 10.12.33.253
-      roles:
-      - Worker
-    - arch: amd64
-      hostname: vasu-mks-salt-scale-delay-w-16
-      operatingSystem: Ubuntu20.04
-      privateip: 10.12.9.68
-      roles:
-      - Worker
-    - arch: amd64
-      hostname: vasu-mks-salt-scale-delay-w-17
-      operatingSystem: Ubuntu20.04
-      privateip: 10.12.48.201
-      roles:
-      - Worker
-    - arch: amd64
-      hostname: vasu-mks-salt-scale-delay-w-18
-      operatingSystem: Ubuntu20.04
-      privateip: 10.12.92.146
-      roles:
-      - Worker
-    - arch: amd64
-      hostname: vasu-mks-salt-scale-delay-w-19
-      operatingSystem: Ubuntu20.04
-      privateip: 10.12.104.149
+      privateIP: 10.12.75.83
       roles:
       - Worker
     - arch: amd64
       hostname: vasu-mks-salt-scale-delay-w-20
       operatingSystem: Ubuntu20.04
-      privateip: 10.12.119.200
+      privateIP: 10.12.119.200
+      roles:
+      - Worker
+    - arch: amd64
+      hostname: vasu-mks-salt-scale-delay-w-13
+      operatingSystem: Ubuntu20.04
+      privateIP: 10.12.88.49
+      roles:
+      - Worker
+    - arch: amd64
+      hostname: vasu-mks-salt-scale-delay-w-16
+      operatingSystem: Ubuntu20.04
+      privateIP: 10.12.9.68
+      roles:
+      - Worker
+    - arch: amd64
+      hostname: vasu-mks-salt-scale-delay-w-4
+      operatingSystem: Ubuntu20.04
+      privateIP: 10.12.94.181
+      roles:
+      - Worker
+    - arch: amd64
+      hostname: vasu-mks-salt-scale-delay-w-3
+      operatingSystem: Ubuntu20.04
+      privateIP: 10.12.53.134
       roles:
       - Worker
     - arch: amd64
       hostname: vasu-mks-salt-scale-delay-w-21
       operatingSystem: Ubuntu20.04
-      privateip: 10.12.0.144
+      privateIP: 10.12.0.144
       roles:
       - Worker
     - arch: amd64
-      hostname: vasu-mks-salt-scale-delay-w-22
+      hostname: vasu-mks-salt-scale-delay-w-17
       operatingSystem: Ubuntu20.04
-      privateip: 10.12.32.28
-      roles:
-      - Worker
-    - arch: amd64
-      hostname: vasu-mks-salt-scale-delay-w-23
-      operatingSystem: Ubuntu20.04
-      privateip: 10.12.1.233
-      roles:
-      - Worker
-    - arch: amd64
-      hostname: vasu-mks-salt-scale-delay-w-24
-      operatingSystem: Ubuntu20.04
-      privateip: 10.12.84.194
-      roles:
-      - Worker
-    - arch: amd64
-      hostname: vasu-mks-salt-scale-delay-w-25
-      operatingSystem: Ubuntu20.04
-      privateip: 10.12.24.84
-      roles:
-      - Worker
-    - arch: amd64
-      hostname: vasu-mks-salt-scale-delay-w-26
-      operatingSystem: Ubuntu20.04
-      privateip: 10.12.125.204
-      roles:
-      - Worker
-    - arch: amd64
-      hostname: vasu-mks-salt-scale-delay-w-27
-      operatingSystem: Ubuntu20.04
-      privateip: 10.12.55.174
-      roles:
-      - Worker
-    - arch: amd64
-      hostname: vasu-mks-salt-scale-delay-w-28
-      operatingSystem: Ubuntu20.04
-      privateip: 10.12.126.189
-      roles:
-      - Worker
-    - arch: amd64
-      hostname: vasu-mks-salt-scale-delay-w-29
-      operatingSystem: Ubuntu20.04
-      privateip: 10.12.67.200
-      roles:
-      - Worker
-    - arch: amd64
-      hostname: vasu-mks-salt-scale-delay-w-30
-      operatingSystem: Ubuntu20.04
-      privateip: 10.12.101.127
+      privateIP: 10.12.48.201
       roles:
       - Worker
     - arch: amd64
       hostname: vasu-mks-salt-scale-delay-w-31
       operatingSystem: Ubuntu20.04
-      privateip: 10.12.74.95
+      privateIP: 10.12.74.95
       roles:
       - Worker
     - arch: amd64
-      hostname: vasu-mks-salt-scale-delay-w-32
+      hostname: vasu-mks-salt-scale-delay-w-10
       operatingSystem: Ubuntu20.04
-      privateip: 10.12.20.142
-      roles:
-      - Worker
-    - arch: amd64
-      hostname: vasu-mks-salt-scale-delay-w-33
-      operatingSystem: Ubuntu20.04
-      privateip: 10.12.13.45
-      roles:
-      - Worker
-    - arch: amd64
-      hostname: vasu-mks-salt-scale-delay-w-34
-      operatingSystem: Ubuntu20.04
-      privateip: 10.12.50.74
-      roles:
-      - Worker
-    - arch: amd64
-      hostname: vasu-mks-salt-scale-delay-w-35
-      operatingSystem: Ubuntu20.04
-      privateip: 10.12.12.26
+      privateIP: 10.12.99.67
       roles:
       - Worker
     - arch: amd64
       hostname: vasu-mks-salt-scale-delay-w-36
       operatingSystem: Ubuntu20.04
-      privateip: 10.12.123.240
+      privateIP: 10.12.123.240
+      roles:
+      - Worker
+    - arch: amd64
+      hostname: vasu-mks-salt-scale-delay-w-19
+      operatingSystem: Ubuntu20.04
+      privateIP: 10.12.104.149
+      roles:
+      - Worker
+    - arch: amd64
+      hostname: vasu-mks-salt-scale-delay-w-25
+      operatingSystem: Ubuntu20.04
+      privateIP: 10.12.24.84
+      roles:
+      - Worker
+    - arch: amd64
+      hostname: vasu-mks-salt-scale-delay-w-2
+      operatingSystem: Ubuntu20.04
+      privateIP: 10.12.104.89
+      roles:
+      - Worker
+    - arch: amd64
+      hostname: vasu-mks-salt-scale-delay-w-11
+      operatingSystem: Ubuntu20.04
+      privateIP: 10.12.122.208
+      roles:
+      - Worker
+    - arch: amd64
+      hostname: vasu-mks-salt-scale-delay-c-3
+      operatingSystem: Ubuntu20.04
+      privateIP: 10.12.122.234
+      roles:
+      - ControlPlane
+    - arch: amd64
+      hostname: vasu-mks-salt-scale-delay-w-12
+      operatingSystem: Ubuntu20.04
+      privateIP: 10.12.73.202
+      roles:
+      - Worker
+    - arch: amd64
+      hostname: vasu-mks-salt-scale-delay-w-9
+      operatingSystem: Ubuntu20.04
+      privateIP: 10.12.60.40
+      roles:
+      - Worker
+    - arch: amd64
+      hostname: vasu-mks-salt-scale-delay-w-26
+      operatingSystem: Ubuntu20.04
+      privateIP: 10.12.125.204
+      roles:
+      - Worker
+    - arch: amd64
+      hostname: vasu-mks-salt-scale-delay-w-14
+      operatingSystem: Ubuntu20.04
+      privateIP: 10.12.83.196
+      roles:
+      - Worker
+    - arch: amd64
+      hostname: vasu-mks-salt-scale-delay-w-22
+      operatingSystem: Ubuntu20.04
+      privateIP: 10.12.32.28
+      roles:
+      - Worker
+    - arch: amd64
+      hostname: vasu-mks-salt-scale-delay-w-30
+      operatingSystem: Ubuntu20.04
+      privateIP: 10.12.101.127
+      roles:
+      - Worker
+    - arch: amd64
+      hostname: vasu-mks-salt-scale-delay-w-38
+      operatingSystem: Ubuntu20.04
+      privateIP: 10.12.39.138
+      roles:
+      - Worker
+    - arch: amd64
+      hostname: vasu-mks-salt-scale-delay-w-39
+      operatingSystem: Ubuntu20.04
+      privateIP: 10.12.86.199
+      roles:
+      - Worker
+    - arch: amd64
+      hostname: vasu-mks-salt-scale-delay-w-28
+      operatingSystem: Ubuntu20.04
+      privateIP: 10.12.126.189
+      roles:
+      - Worker
+    - arch: amd64
+      hostname: vasu-mks-salt-scale-delay-c-1
+      operatingSystem: Ubuntu20.04
+      privateIP: 10.12.34.215
+      roles:
+      - ControlPlane
+    - arch: amd64
+      hostname: vasu-mks-salt-scale-delay-w-15
+      operatingSystem: Ubuntu20.04
+      privateIP: 10.12.33.253
+      roles:
+      - Worker
+    - arch: amd64
+      hostname: vasu-mks-salt-scale-delay-w-6
+      operatingSystem: Ubuntu20.04
+      privateIP: 10.12.17.254
+      roles:
+      - Worker
+    - arch: amd64
+      hostname: vasu-mks-salt-scale-delay-w-27
+      operatingSystem: Ubuntu20.04
+      privateIP: 10.12.55.174
+      roles:
+      - Worker
+    - arch: amd64
+      hostname: vasu-mks-salt-scale-delay-c-2
+      operatingSystem: Ubuntu20.04
+      privateIP: 10.12.126.252
+      roles:
+      - ControlPlane
+    - arch: amd64
+      hostname: vasu-mks-salt-scale-delay-w-5
+      operatingSystem: Ubuntu20.04
+      privateIP: 10.12.42.106
+      roles:
+      - Worker
+    - arch: amd64
+      hostname: vasu-mks-salt-scale-delay-w-35
+      operatingSystem: Ubuntu20.04
+      privateIP: 10.12.12.26
+      roles:
+      - Worker
+    - arch: amd64
+      hostname: vasu-mks-salt-scale-delay-w-32
+      operatingSystem: Ubuntu20.04
+      privateIP: 10.12.20.142
+      roles:
+      - Worker
+    - arch: amd64
+      hostname: vasu-mks-salt-scale-delay-w-23
+      operatingSystem: Ubuntu20.04
+      privateIP: 10.12.1.233
+      roles:
+      - Worker
+    - arch: amd64
+      hostname: vasu-mks-salt-scale-delay-w-29
+      operatingSystem: Ubuntu20.04
+      privateIP: 10.12.67.200
       roles:
       - Worker
     - arch: amd64
       hostname: vasu-mks-salt-scale-delay-w-37
       operatingSystem: Ubuntu20.04
-      privateip: 10.12.48.249
-      roles:
-      - Worker
-      labels:
-        app: infra
-      taints:
-      - effect: NoSchedule
-        key: app
-        value: infra
-    - arch: amd64
-      hostname: vasu-mks-salt-scale-delay-w-38
-      operatingSystem: Ubuntu20.04
-      privateip: 10.12.39.138
-      roles:
-      - Worker
-      labels:
-        app: infra
-      taints:
-      - effect: NoSchedule
-        key: app
-        value: infra
-    - arch: amd64
-      hostname: vasu-mks-salt-scale-delay-w-39
-      operatingSystem: Ubuntu20.04
-      privateip: 10.12.86.199
+      privateIP: 10.12.48.249
       roles:
       - Worker
     - arch: amd64
-      hostname: vasu-mks-salt-scale-delay-w-40
+      hostname: vasu-mks-salt-scale-delay-w-33
       operatingSystem: Ubuntu20.04
-      privateip: 10.12.76.113
+      privateIP: 10.12.13.45
       roles:
       - Worker
     - arch: amd64
-      hostname: vasu-mks-salt-scale-delay-w-41
+      hostname: vasu-mks-salt-scale-delay-w-34
       operatingSystem: Ubuntu20.04
-      privateip: 10.12.95.152
+      privateIP: 10.12.50.74
       roles:
       - Worker
     - arch: amd64
-      hostname: vasu-mks-salt-scale-delay-w-42
+      hostname: vasu-mks-salt-scale-delay-w-24
       operatingSystem: Ubuntu20.04
-      privateip: 10.12.50.181
+      privateIP: 10.12.84.194
       roles:
       - Worker
     - arch: amd64
-      hostname: vasu-mks-salt-scale-delay-w-43
+      hostname: vasu-mks-salt-scale-delay-w-8
       operatingSystem: Ubuntu20.04
-      privateip: 10.12.26.167
-      roles:
-      - Worker
-    - arch: amd64
-      hostname: vasu-mks-salt-scale-delay-w-44
-      operatingSystem: Ubuntu20.04
-      privateip: 10.12.80.232
-      roles:
-      - Worker
-    - arch: amd64
-      hostname: vasu-mks-salt-scale-delay-w-45
-      operatingSystem: Ubuntu20.04
-      privateip: 10.12.38.142
-      roles:
-      - Worker
-    - arch: amd64
-      hostname: vasu-mks-salt-scale-delay-w-46
-      operatingSystem: Ubuntu20.04
-      privateip: 10.12.100.99
-      roles:
-      - Worker
-    - arch: amd64
-      hostname: vasu-mks-salt-scale-delay-w-47
-      operatingSystem: Ubuntu20.04
-      privateip: 10.12.110.219
+      privateIP: 10.12.80.140
       roles:
       - Worker
   type: mks
