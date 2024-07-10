@@ -9,5 +9,6 @@ spec:
     enabled: true
     projects:
     - name: vasu-shared-project
+    - name: vasu-shared-project-2
   type: Docker
   version: r2.7.0
