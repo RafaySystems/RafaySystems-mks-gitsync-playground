@@ -7,6 +7,7 @@ spec:
   blueprint:
     name: minimal
     version: latest
+  cloudCredentials: vasu-mks-ssh-01
   config:
     autoApproveNodes: true
     kubernetesVersion: v1.28.9
