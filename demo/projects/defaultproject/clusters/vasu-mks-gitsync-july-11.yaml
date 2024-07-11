@@ -7,7 +7,7 @@ spec:
   blueprint:
     name: minimal
     version: latest
-  cloudCredentials: vasu-mks-ssh-010
+  cloudCredentials: vasu-mks-ssh-01
   config:
     autoApproveNodes: true
     kubernetesVersion: v1.28.9
@@ -22,7 +22,7 @@ spec:
     - arch: amd64
       hostname: vasu-mks-scale-c-tb
       operatingSystem: Ubuntu20.04
-      privateIP: 10.12.0.26
+      privateIP: 10.12.122.91
       roles:
       - Master
       - Worker
