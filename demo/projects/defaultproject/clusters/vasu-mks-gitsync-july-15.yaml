@@ -26,4 +26,7 @@ spec:
       roles:
       - ControlPlane
       - Worker
+      labels:
+        app: infra
+        infra: "true"
   type: mks
