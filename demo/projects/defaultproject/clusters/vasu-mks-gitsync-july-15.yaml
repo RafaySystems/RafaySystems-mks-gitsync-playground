@@ -28,5 +28,5 @@ spec:
       - Worker
       labels:
         app: infra
-        infra: "true"
+        infra: "false"
   type: mks
