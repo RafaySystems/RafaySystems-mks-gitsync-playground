@@ -1,8 +1,0 @@
-apiVersion: gitops.k8smgmt.io/v3
-kind: Agent
-metadata:
-  name: vasu-mks-agent-inactive
-  project: defaultproject
-spec:
-  type: Docker
-  version: r2.7.0

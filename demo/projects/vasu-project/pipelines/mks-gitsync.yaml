@@ -1,0 +1,32 @@
+apiVersion: gitops.k8smgmt.io/v3
+kind: Pipeline
+metadata:
+  name: mks-gitsync
+  project: vasu-project
+spec:
+  active: true
+  stages:
+  - config:
+      destinationRepo: {}
+      gitToSystemSync: true
+      includedResources:
+      - name: '*'
+      sourceAsDestination: true
+      sourceRepo:
+        path:
+          name: demo
+        repository: vasu-mks-playground
+        revision: mks
+      systemToGitSync: true
+    name: mks-gitops-stage
+    type: SystemSync
+  triggers:
+  - config:
+      repo:
+        paths:
+        - name: demo
+        provider: Github
+        repository: vasu-mks-playground
+        revision: mks
+    name: vasu-mks-webhook
+    type: Webhook

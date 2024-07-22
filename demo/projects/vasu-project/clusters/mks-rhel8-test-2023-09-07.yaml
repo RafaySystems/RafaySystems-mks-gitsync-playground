@@ -1,0 +1,44 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Cluster
+metadata:
+  name: mks-rhel8-test-2023-09-07
+  project: vasu-project
+spec:
+  blueprint:
+    name: minimal
+  config:
+    kubernetesVersion: v1.26.5
+    location: mumbai-in
+    network:
+      cni:
+        name: Calico
+        version: 3.24.5
+      ipv6:
+        podSubnet: 2001:db8:42:0::/56
+        serviceSubnet: 2001:db8:42:1::/112
+      podSubnet: 10.244.0.0/16
+      serviceSubnet: 10.96.0.0/12
+    nodes:
+    - arch: x86_64
+      hostname: ip-172-31-20-21.us-west-2.compute.internal
+      operatingSystem: RedHat8.6
+      privateIP: 172.31.20.21
+      roles:
+      - ControlPlane
+      - Worker
+      ssh: {}
+    - arch: x86_64
+      hostname: ip-172-31-21-100.us-west-2.compute.internal
+      operatingSystem: RedHat8.6
+      privateIP: 172.31.21.100
+      roles:
+      - Worker
+      ssh: {}
+    - arch: x86_64
+      hostname: ip-172-31-29-154.us-west-2.compute.internal
+      operatingSystem: RedHat8.5
+      privateIP: 172.31.29.154
+      roles:
+      - Worker
+      ssh: {}
+  type: mks

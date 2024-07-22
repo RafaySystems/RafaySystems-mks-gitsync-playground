@@ -1,0 +1,39 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Cluster
+metadata:
+  name: vasu-eks-cred-02
+  project: vasu-project
+spec:
+  blueprintConfig:
+    name: minimal
+  cloudCredentials: vasu-aws
+  config:
+    managedNodeGroups:
+    - amiFamily: AmazonLinux2
+      desiredCapacity: 1
+      iam:
+        withAddonPolicies:
+          autoScaler: true
+      instanceType: t3.xlarge
+      maxSize: 2
+      minSize: 1
+      name: vasu-ng-1
+      version: "1.22"
+      volumeSize: 80
+      volumeType: gp3
+    metadata:
+      name: vasu-eks-cred-02
+      region: us-west-2
+      version: "1.22"
+    network:
+      cni:
+        name: aws-cni
+    vpc:
+      cidr: 192.168.0.0/16
+      clusterEndpoints:
+        privateAccess: true
+        publicAccess: true
+      nat:
+        gateway: Single
+  proxyConfig: {}
+  type: aws-eks

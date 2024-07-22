@@ -1,0 +1,35 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Cluster
+metadata:
+  name: vasu-mks-salt-ha-minion-1
+  project: vasu-project
+spec:
+  blueprint:
+    name: minimal
+  config:
+    autoApproveNodes: true
+    kubernetesVersion: v1.26.12
+    network:
+      cni:
+        name: Calico
+        version: 3.26.1
+      podSubnet: 10.244.0.0/16
+      serviceSubnet: 10.96.0.0/12
+    nodes:
+    - arch: amd64
+      hostname: vasu-mks-salt-scale-c
+      operatingSystem: Ubuntu20.04
+      privateIP: 10.12.81.69
+      roles:
+      - Worker
+      - ControlPlane
+      ssh: {}
+    - arch: amd64
+      hostname: vasu-mks-salt-scale-c-2
+      operatingSystem: Ubuntu20.04
+      privateIP: 10.12.123.244
+      roles:
+      - Worker
+      - ControlPlane
+      ssh: {}
+  type: mks

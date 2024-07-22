@@ -1,0 +1,15 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Blueprint
+metadata:
+  name: demo-bp
+  project: vasu-project
+spec:
+  base:
+    name: minimal
+    version: 2.7.0
+  defaultAddons:
+    enableRookCeph: true
+  driftWebhook:
+    enabled: true
+  type: custom
+  version: v1.0

@@ -1,0 +1,11 @@
+apiVersion: gitops.k8smgmt.io/v3
+kind: Agent
+metadata:
+  name: vasu-mks-k8s-agent
+  project: vasu-project
+spec:
+  active: true
+  cluster:
+    name: vasu-mks-rctl-apply-v1-cluster
+  type: Cluster
+  version: r2.8.0
