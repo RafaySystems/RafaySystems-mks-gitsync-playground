@@ -28,7 +28,7 @@ spec:
       - Worker
       labels:
         app: infra
-        infra: "false"
+        infra: "true"
     - arch: amd64
       hostname: vasu-mks-v3-qc-w
       operatingSystem: Ubuntu20.04
