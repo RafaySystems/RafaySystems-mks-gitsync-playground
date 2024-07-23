@@ -1,6 +1,8 @@
 apiVersion: infra.k8smgmt.io/v3
 kind: Cluster
 metadata:
+  labels:
+    systemsync: check
   name: vasu-mks-gitsync-july-15
   project: defaultproject
 spec:
