@@ -5,8 +5,8 @@ metadata:
   project: vasu-project
 spec:
   blueprint:
-    name: minimal
-    version: latest
+    name: minimal-with-openebs
+    version: v1
   cloudCredentials: vasu-mks-ssh
   config:
     autoApproveNodes: true
@@ -21,15 +21,15 @@ spec:
     nodes:
     - arch: amd64
       hostname: vasu-mks-v3-qc-c
+      labels:
+        app: infra
+        infra: "true"
+        test: app
       operatingSystem: Ubuntu20.04
       privateIP: 10.12.11.158
       roles:
       - ControlPlane
       - Worker
-      labels:
-        app: infra
-        infra: "true"
-        test: "app"
     - arch: amd64
       hostname: vasu-mks-v3-qc-w
       operatingSystem: Ubuntu20.04
