@@ -11,3 +11,6 @@ status:
   projects:
   - projectId: 72dg7g2
     repositoryId: 5m1o6y2
+  webhookConfig:
+    webhookSecret: c00a7581eb1432c3420e1ae4784fbb0b11e56932ca87efb01453b0796aba09c6
+    webhookURL: https://qc-console.stage.rafay.dev/v2/config/webhook/repository/5m1o6y2

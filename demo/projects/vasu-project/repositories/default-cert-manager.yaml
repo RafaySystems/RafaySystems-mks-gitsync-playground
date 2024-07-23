@@ -11,3 +11,6 @@ status:
   projects:
   - projectId: 72dg7g2
     repositoryId: j2q135k
+  webhookConfig:
+    webhookSecret: 6ad6e44ef60a9808bf2e6a5d65a0cdc61779d29d6556feb5d819d0f73091ffab
+    webhookURL: https://qc-console.stage.rafay.dev/v2/config/webhook/repository/j2q135k

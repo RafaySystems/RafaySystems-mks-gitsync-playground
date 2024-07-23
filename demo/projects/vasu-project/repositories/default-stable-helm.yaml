@@ -11,3 +11,6 @@ status:
   projects:
   - projectId: 72dg7g2
     repositoryId: dk3g582
+  webhookConfig:
+    webhookSecret: e80aeacfc1cb663963dded016664e4b6a0516346334ee7f2b77b3b80ce58102d
+    webhookURL: https://qc-console.stage.rafay.dev/v2/config/webhook/repository/dk3g582
