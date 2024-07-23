@@ -24,6 +24,6 @@ spec:
       operatingSystem: Ubuntu20.04
       privateIP: 10.12.59.115
       roles:
-      - Master
+      - ControlPlane
       - Worker
   type: mks

@@ -4,7 +4,6 @@ metadata:
   name: vasu-mks-gitsync-001
   project: defaultproject
 spec:
-  type: mks
   blueprint:
     name: minimal
     version: latest
@@ -25,35 +24,35 @@ spec:
     - arch: amd64
       hostname: vasu-mks-scale-c-tb-1
       operatingSystem: Ubuntu20.04
-      privateip: 10.12.87.186
+      privateIP: 10.12.87.186
       roles:
       - ControlPlane
     - arch: amd64
       hostname: vasu-mks-scale-c-tb-2
       operatingSystem: Ubuntu20.04
-      privateip: 10.12.33.30
+      privateIP: 10.12.33.30
       roles:
       - ControlPlane
     - arch: amd64
       hostname: vasu-mks-scale-c-tb-3
       operatingSystem: Ubuntu20.04
-      privateip: 10.12.118.110
+      privateIP: 10.12.118.110
       roles:
-      - Master
+      - ControlPlane
     - arch: amd64
       hostname: vasu-mks-scale-w-tb-1
       operatingSystem: Ubuntu20.04
-      privateip: 10.12.44.34
+      privateIP: 10.12.44.34
       roles:
       - Worker
     - arch: amd64
       hostname: vasu-mks-scale-w-tb-2
-      operatingSystem: Ubuntu20.04
-      privateip: 10.12.105.227
-      roles:
-      - Worker
       labels:
         app: infra
+      operatingSystem: Ubuntu20.04
+      privateIP: 10.12.105.227
+      roles:
+      - Worker
       taints:
       - effect: NoSchedule
         key: app
@@ -67,7 +66,7 @@ spec:
     - arch: amd64
       hostname: vasu-mks-scale-w-tb-4
       operatingSystem: Ubuntu20.04
-      privateIP: 10.12.106.155 
+      privateIP: 10.12.106.155
       roles:
       - Worker
     - arch: amd64
@@ -78,28 +77,28 @@ spec:
       - Worker
     - arch: amd64
       hostname: vasu-mks-scale-w-tb-6
-      operatingSystem: Ubuntu20.04
-      privateIP: 10.12.101.223 
-      roles:
-      - Worker
       labels:
         app: infra
+      operatingSystem: Ubuntu20.04
+      privateIP: 10.12.101.223
+      roles:
+      - Worker
       taints:
       - effect: NoSchedule
         key: app
         value: infra
     - arch: amd64
       hostname: vasu-mks-scale-w-tb-7
+      labels:
+        app: infra
       operatingSystem: Ubuntu20.04
       privateIP: 10.12.110.50
       roles:
       - Worker
-      labels:
-        app: infra
       taints:
       - effect: NoSchedule
         key: app
-        value: infra  
+        value: infra
   systemComponentsPlacement:
     nodeSelector:
       app: infra
@@ -108,3 +107,4 @@ spec:
       key: app
       operator: Equal
       value: infra
+  type: mks
