@@ -2,7 +2,7 @@ apiVersion: infra.k8smgmt.io/v3
 kind: Cluster
 metadata:
   name: vasu-mks-gitsync-july-26
-  project: vasu-project
+  project: defaultproject
 spec:
   blueprint:
     name: minimal
