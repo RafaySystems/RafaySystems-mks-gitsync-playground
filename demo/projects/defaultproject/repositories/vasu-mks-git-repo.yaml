@@ -5,20 +5,20 @@ metadata:
   project: defaultproject
 spec:
   agents:
-  - name: vasu-mks-agent
+  - name: vasu-mks-agent-july-26
   credentials:
     password: sealed://credentials.password
     username: vasu@rafay.co
   endpoint: https://github.com/RafaySystems/mks-gitsync-playground.git
   options:
-    provider: Github
+    insecure: true
   secret:
     name: file://artifacts/vasu-mks-git-repo/sealed-secret.yaml
   type: Git
 status:
   agents:
-  - id: rx28oml
-    name: vasu-mks-agent
+  - id: q6kn4ml
+    name: vasu-mks-agent-july-26
   projects:
   - projectId: rx28oml
     repositoryId: 7dkgjkx
