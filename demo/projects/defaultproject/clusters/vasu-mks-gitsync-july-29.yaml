@@ -33,7 +33,7 @@ spec:
       hostname: vasu-mks-scale-w-tb
       labels:
         app: infra
-        infra: "false"
+        infra: "true"
       operatingSystem: Ubuntu20.04
       privateIP: 10.12.86.73
       roles:
