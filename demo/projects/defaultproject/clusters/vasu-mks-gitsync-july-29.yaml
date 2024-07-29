@@ -19,6 +19,15 @@ spec:
       serviceSubnet: 10.96.0.0/12
     nodes:
     - arch: amd64
+      hostname: vasu-mks-scale-w-tb
+      labels:
+        app: infra
+        infra: "false"
+      operatingSystem: Ubuntu20.04
+      privateIP: 10.12.86.73
+      roles:
+      - Worker
+    - arch: amd64
       hostname: vasu-mks-scale-c-tb
       labels:
         app: infra
@@ -27,14 +36,5 @@ spec:
       privateIP: 10.12.35.15
       roles:
       - ControlPlane
-      - Worker
-    - arch: amd64
-      hostname: vasu-mks-scale-w-tb
-      labels:
-        app: infra
-        infra: "false"
-      operatingSystem: Ubuntu20.04
-      privateIP: 10.12.86.73
-      roles:
       - Worker
   type: mks
