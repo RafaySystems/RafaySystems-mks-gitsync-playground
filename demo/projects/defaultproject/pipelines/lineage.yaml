@@ -4,6 +4,7 @@ metadata:
   name: lineage
   project: defaultproject
 spec:
+  active: true
   stages:
   - config:
       committerEmail: vasu@rafay.co
