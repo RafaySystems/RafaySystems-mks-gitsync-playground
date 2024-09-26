@@ -3,6 +3,8 @@ kind: Cluster
 metadata:
   name: vasu-mks-gitsync-july-29
   project: defaultproject
+  labels:
+    test: lineage
 spec:
   blueprint:
     name: default
