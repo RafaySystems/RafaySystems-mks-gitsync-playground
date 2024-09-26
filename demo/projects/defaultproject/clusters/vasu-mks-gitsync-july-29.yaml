@@ -5,8 +5,7 @@ metadata:
   project: defaultproject
 spec:
   blueprint:
-    name: minimal-openebs
-    version: v1
+    name: default
   cloudCredentials: vasu-mks-ssh-010
   config:
     autoApproveNodes: true
