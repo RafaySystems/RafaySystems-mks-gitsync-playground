@@ -20,3 +20,11 @@ spec:
       systemToGitSync: true
     name: vasu-lineage-stage
     type: SystemSync
+  triggers:
+  - config:
+      repo:
+        provider: Github
+        repository: vasu-mks-git-repo
+        revision: main
+    name: lineage-trigger
+    type: Webhook
