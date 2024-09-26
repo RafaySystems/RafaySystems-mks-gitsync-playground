@@ -5,5 +5,9 @@ metadata:
   project: defaultproject
 spec:
   active: true
+  sharing:
+    enabled: true
+    projects:
+    - name: terraform
   type: Docker
   version: r2.8.0

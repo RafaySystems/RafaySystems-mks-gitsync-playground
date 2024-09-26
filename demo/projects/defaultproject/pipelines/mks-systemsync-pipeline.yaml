@@ -24,7 +24,8 @@ spec:
         revision: main
       gitToSystemSync: true
       includedResources:
-      - name: Cluster
+      - name: '*'
+      sourceAsDestination: true
       sourceRepo:
         path:
           name: demo
