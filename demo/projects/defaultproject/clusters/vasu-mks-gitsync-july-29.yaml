@@ -1,10 +1,12 @@
 apiVersion: infra.k8smgmt.io/v3
 kind: Cluster
 metadata:
-  name: vasu-mks-gitsync-july-29
-  project: defaultproject
+  annotations:
+    rafay.dev/lineage: '{"filePath":"projects/defaultproject/clusters/vasu-mks-gitsync-july-29.yaml","repoUrl":"https://github.com/RafaySystems/mks-gitsync-playground.git","structuredFolder":"demo"}'
   labels:
     test: lineage
+  name: vasu-mks-gitsync-july-29
+  project: defaultproject
 spec:
   blueprint:
     name: default
