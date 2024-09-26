@@ -1,6 +1,0 @@
-apiVersion: gitops.k8smgmt.io/v3
-kind: Pipeline
-metadata:
-  name: demo
-  project: defaultproject
-spec: {}

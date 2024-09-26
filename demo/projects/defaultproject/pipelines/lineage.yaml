@@ -1,0 +1,22 @@
+apiVersion: gitops.k8smgmt.io/v3
+kind: Pipeline
+metadata:
+  name: lineage
+  project: defaultproject
+spec:
+  stages:
+  - config:
+      committerEmail: vasu@rafay.co
+      destinationRepo: {}
+      gitToSystemSync: true
+      includedResources:
+      - name: '*'
+      sourceAsDestination: true
+      sourceRepo:
+        path:
+          name: demo
+        repository: vasu-mks-git-repo
+        revision: main
+      systemToGitSync: true
+    name: vasu-lineage-stage
+    type: SystemSync
