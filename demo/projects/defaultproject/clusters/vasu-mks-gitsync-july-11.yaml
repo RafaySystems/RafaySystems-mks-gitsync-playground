@@ -1,12 +1,13 @@
 apiVersion: infra.k8smgmt.io/v3
 kind: Cluster
 metadata:
-  name: vasu-mks-gitsync-july-29
+  name: vasu-mks-gitsync-july-11
   project: defaultproject
 spec:
   blueprint:
-    name: default
-  cloudCredentials: vasu-mks-ssh-010
+    name: minimal
+    version: latest
+  cloudCredentials: vasu-mks-ssh-01
   config:
     autoApproveNodes: true
     kubernetesVersion: v1.28.9
@@ -20,22 +21,9 @@ spec:
     nodes:
     - arch: amd64
       hostname: vasu-mks-scale-c-tb
-      labels:
-        app: infra
-        day2: modify
-        infra: "true"
       operatingSystem: Ubuntu20.04
-      privateIP: 10.12.35.15
+      privateIP: 10.12.122.91
       roles:
       - ControlPlane
-      - Worker
-    - arch: amd64
-      hostname: vasu-mks-scale-w-tb
-      labels:
-        app: infra
-        infra: "true"
-      operatingSystem: Ubuntu20.04
-      privateIP: 10.12.86.73
-      roles:
       - Worker
   type: mks
