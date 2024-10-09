@@ -3,9 +3,13 @@ kind: Cluster
 metadata:
   name: mks-lineage-oct-9
   project: defaultproject
+  labels:
+    app: infra
+    infra: "true"
 spec:
   blueprint:
     name: minimal
+  cloudCredentials: vasu-mks-ssh-010
   config:
     autoApproveNodes: true
     installerTtl: 365
