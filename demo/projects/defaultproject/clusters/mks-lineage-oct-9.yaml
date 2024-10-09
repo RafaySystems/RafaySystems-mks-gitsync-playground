@@ -3,13 +3,9 @@ kind: Cluster
 metadata:
   name: mks-lineage-oct-9
   project: defaultproject
-  labels:
-    app: infra
-    infra: "true"
 spec:
   blueprint:
     name: minimal
-  cloudCredentials: vasu-mks-ssh-010
   config:
     autoApproveNodes: true
     installerTtl: 365
@@ -25,10 +21,9 @@ spec:
     - arch: amd64
       hostname: mks-sample-cp-node
       operatingSystem: Ubuntu20.04
-      privateip: 10.12.74.35
+      privateIP: 10.12.74.35
       roles:
       - Worker
-      - Master
-    proxy: {}
-  proxyconfig: {}
+      - ControlPlane
+  proxy: {}
   type: mks
