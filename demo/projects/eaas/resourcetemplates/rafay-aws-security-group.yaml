@@ -45,8 +45,8 @@ spec:
       description: ID of the VPC where to create security group
       override:
         type: allowed
-    value: "null"
-    valueType: hcl
+    value: $(resource["rafay-aws-vpc"].output.vpc_id.value)$
+    valueType: expression
   - name: name
     options:
       description: Name of security group - not required if create_sg is false
@@ -117,8 +117,17 @@ spec:
       description: List of ingress rules to create where 'cidr_blocks' is used
       override:
         type: allowed
-    value: '[]'
-    valueType: hcl
+    value: |-
+      [
+          {
+              "from_port": 1433,
+              "to_port": 1433,
+              "protocol": "tcp",
+              "description": "SqlServer access from within VPC",
+              "cidr_blocks": "$(resource[\"rafay-aws-vpc\"].output.vpc_cidr_block.value)$"
+          }
+      ]
+    valueType: json
   - name: ingress_with_ipv6_cidr_blocks
     options:
       description: List of ingress rules to create where 'ipv6_cidr_blocks' is used
@@ -414,5 +423,5 @@ spec:
         type: allowed
     value: "0.0"
     valueType: hcl
-  version: v1
+  version: v2
   versionState: active
