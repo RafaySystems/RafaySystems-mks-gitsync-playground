@@ -1,0 +1,16 @@
+apiVersion: integrations.k8smgmt.io/v3
+kind: Repository
+metadata:
+  name: default-stable-helm
+  project: eaas
+spec:
+  endpoint: https://charts.helm.sh/stable
+  options: {}
+  type: Helm
+status:
+  projects:
+  - projectId: q6kn4ml
+    repositoryId: 3mx6vmr
+  webhookConfig:
+    webhookSecret: d8c484248e704c584b4c5a537d24a3dcc9af4bb5923caabc2bba2348598dda66
+    webhookURL: https://console-vasu-mks-v3.dev.rafay-edge.net/v2/config/webhook/repository/3mx6vmr

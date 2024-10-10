@@ -1,0 +1,26 @@
+apiVersion: integrations.k8smgmt.io/v3
+kind: Repository
+metadata:
+  name: eaas-repo-eaas
+  project: eaas
+spec:
+  agents:
+  - name: eaas-agent-oct-10
+  credentials:
+    password: sealed://credentials.password
+    username: vasu@rafay.co
+  endpoint: https://github.com/RafaySystems/mks-gitsync-playground.git
+  options: {}
+  secret:
+    name: file://artifacts/eaas-repo-eaas/sealed-secret.yaml
+  type: Git
+status:
+  agents:
+  - id: dpkv0mn
+    name: eaas-agent-oct-10
+  projects:
+  - projectId: q6kn4ml
+    repositoryId: gkj3zm0
+  webhookConfig:
+    webhookSecret: 8ff5d42f53fc272d0c8b3b7781d55c00629cebbc010171ada25f139ced6473a5
+    webhookURL: https://console-vasu-mks-v3.dev.rafay-edge.net/v2/config/webhook/repository/gkj3zm0

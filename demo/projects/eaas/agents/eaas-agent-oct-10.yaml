@@ -1,8 +1,9 @@
 apiVersion: gitops.k8smgmt.io/v3
 kind: Agent
 metadata:
-  name: vasu-mks-agent-inactive
-  project: defaultproject
+  name: eaas-agent-oct-10
+  project: eaas
 spec:
+  active: true
   type: Docker
-  version: r2.7.0
+  version: r2.10.0
