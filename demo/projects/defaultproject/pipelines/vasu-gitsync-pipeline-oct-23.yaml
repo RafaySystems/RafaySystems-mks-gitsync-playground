@@ -4,6 +4,7 @@ metadata:
   name: vasu-gitsync-pipeline-oct-23
   project: defaultproject
 spec:
+  active: true
   stages:
   - config:
       committerEmail: vasu@rafay.co
