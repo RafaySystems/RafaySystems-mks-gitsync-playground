@@ -6,10 +6,6 @@ metadata:
 spec:
   envs:
   - key: AWS_ACCESS_KEY_ID
-    sensitive: true
-    value: sealed://AWS_ACCESS_KEY_ID
+    value: UPDATE_VALUE
   - key: AWS_SECRET_ACCESS_KEY
-    sensitive: true
-    value: sealed://AWS_SECRET_ACCESS_KEY
-  secret:
-    name: file://artifacts/rafay-aws-defaultproject/sealed-secret.yaml
+    value: UPDATE_VALUE
