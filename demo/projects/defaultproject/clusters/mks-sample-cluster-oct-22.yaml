@@ -24,6 +24,7 @@ spec:
       labels:
         app: infra
         infra: "true"
+        test: "add"
       operatingSystem: Ubuntu22.04
       privateIP: 10.12.48.150
       roles:
