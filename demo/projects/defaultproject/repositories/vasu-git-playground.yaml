@@ -1,0 +1,27 @@
+apiVersion: integrations.k8smgmt.io/v3
+kind: Repository
+metadata:
+  name: vasu-git-playground
+  project: defaultproject
+spec:
+  agents:
+  - name: vasu-mks-agent-july-26
+  credentials:
+    password: sealed://credentials.password
+    username: vasu@rafay.co
+  endpoint: https://github.com/RafaySystems/mks-gitsync-playground.git
+  options:
+    provider: Github
+  secret:
+    name: file://artifacts/vasu-git-playground/sealed-secret.yaml
+  type: Git
+status:
+  agents:
+  - id: q6kn4ml
+    name: vasu-mks-agent-july-26
+  projects:
+  - projectId: rx28oml
+    repositoryId: d27x0k4
+  webhookConfig:
+    webhookSecret: abb4a99dfe827bb5434035629122c0e99fc2dd453b418b204b81efd8a802d245
+    webhookURL: https://console-vasu-mks-v3.dev.rafay-edge.net/v2/config/webhook/repository/d27x0k4

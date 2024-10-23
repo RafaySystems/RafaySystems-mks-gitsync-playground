@@ -1,8 +1,8 @@
 apiVersion: eaas.envmgmt.io/v1
 kind: ConfigContext
 metadata:
-  name: rafay-aws-eaas
-  project: eaas
+  name: rafay-aws-defaultproject
+  project: defaultproject
 spec:
   envs:
   - key: AWS_ACCESS_KEY_ID
@@ -12,4 +12,4 @@ spec:
     sensitive: true
     value: sealed://AWS_SECRET_ACCESS_KEY
   secret:
-    name: file://artifacts/rafay-aws-eaas/sealed-secret.yaml
+    name: file://artifacts/rafay-aws-defaultproject/sealed-secret.yaml
