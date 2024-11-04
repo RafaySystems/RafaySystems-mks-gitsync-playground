@@ -1,0 +1,70 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Cluster
+metadata:
+  name: mks-consul-replace-cluster-nov-4
+  project: defaultproject
+spec:
+  blueprint:
+    name: minimal
+    version: latest
+  cloudCredentials: vasu-mks-ssh-010
+  config:
+    autoApproveNodes: true
+    highAvailability: true
+    installerTtl: 365
+    kubernetesVersion: v1.29.8
+    network:
+      cni:
+        name: Calico
+        version: 3.26.1
+      podSubnet: 10.244.0.0/16
+      serviceSubnet: 10.96.0.0/12
+    nodes:
+    - arch: amd64
+      hostname: mks-sample-w-node-1
+      labels:
+        app: infra
+        infra: "true"
+      operatingSystem: Ubuntu22.04
+      privateIP: 10.12.29.169
+      roles:
+      - Worker
+    - arch: amd64
+      hostname: mks-sample-cp-node-1
+      operatingSystem: Ubuntu22.04
+      privateIP: 10.12.113.192
+      roles:
+      - ControlPlane
+      - Worker
+    - arch: amd64
+      hostname: mks-sample-cp-node-2
+      operatingSystem: Ubuntu22.04
+      privateIP: 10.12.1.78
+      roles:
+      - ControlPlane
+      - Worker
+    - arch: amd64
+      hostname: mks-sample-cp-node-3
+      operatingSystem: Ubuntu22.04
+      privateIP: 10.12.6.208
+      roles:
+      - ControlPlane
+      - Worker
+  systemComponentsPlacement:
+    nodeSelector:
+      app: infra
+      infra: "true"
+    tolerations:
+    - effect: NoSchedule
+      key: app
+      operator: Equal
+      value: infra
+    - effect: NoSchedule
+      key: app
+      operator: Equal
+      value: platform
+    - effect: NoSchedule
+      key: infra
+      operator: Equal
+      value: "true"
+  type: mks
