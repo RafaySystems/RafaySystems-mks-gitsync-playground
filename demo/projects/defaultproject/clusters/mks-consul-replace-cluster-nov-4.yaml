@@ -21,13 +21,11 @@ spec:
       serviceSubnet: 10.96.0.0/12
     nodes:
     - arch: amd64
-      hostname: mks-sample-w-node-1
-      labels:
-        app: infra
-        infra: "true"
+      hostname: mks-sample-cp-node-2
       operatingSystem: Ubuntu22.04
-      privateIP: 10.12.29.169
+      privateIP: 10.12.1.78
       roles:
+      - ControlPlane
       - Worker
     - arch: amd64
       hostname: mks-sample-cp-node-1
@@ -37,18 +35,20 @@ spec:
       - ControlPlane
       - Worker
     - arch: amd64
-      hostname: mks-sample-cp-node-2
-      operatingSystem: Ubuntu22.04
-      privateIP: 10.12.1.78
-      roles:
-      - ControlPlane
-      - Worker
-    - arch: amd64
       hostname: mks-sample-cp-node-3
       operatingSystem: Ubuntu22.04
       privateIP: 10.12.6.208
       roles:
       - ControlPlane
+      - Worker
+    - arch: amd64
+      hostname: mks-sample-w-node-1
+      labels:
+        app: infra
+        infra: "true"
+      operatingSystem: Ubuntu22.04
+      privateIP: 10.12.29.169
+      roles:
       - Worker
   systemComponentsPlacement:
     nodeSelector:
